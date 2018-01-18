@@ -1,0 +1,200 @@
+{
+  "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+  "_type": "entity",
+  "_head": {
+    "name": "Account",
+    "description": "This is the resource description",
+    "created": 42424242424242,
+    "updated": 42424242424242,
+    "version": "1.2.3"
+  },
+  "_refs": {
+    "4ABE4F6230F148B3BAB987715B49DE22": {
+      "count": 2,
+      "type": "entity"
+    },
+    "5FE98E00DBCC405E8150CC6035BFBA13": {
+      "count": 1,
+      "type": "entity"
+    }
+  },
+  "_body": {
+     "_": {
+         "layout": {
+             "_": [
+               {
+                 "uuid": "40E75F3DE56B4B11B3AFBDE46785737B"
+               },
+               {
+                 "uuid": "9CEF74766BBB4B9682B7817B43CEAE48"
+               },
+               {
+                 "uuid": "34F209A883D3406FBA6BACD9E07DB1D9",
+                 "groups": {
+                   "_": [
+                     {
+                       "uuid": "F429C51BF01C405DA517616E0E16DE4E",
+                       "groups": {
+                         "_": [
+                           {
+                             "uuid": "8823CFCE7D4645C68991332091C1A05C"
+                           },
+                           {
+                             "uuid": "58A9345E881F48C980498C7FFB68667D"
+                           },
+                           {
+                             "uuid": "2FB36217D01F4DA4B7E965BA3E1B45CE"
+                           }
+                         ]
+                       }
+                     }
+                   ]
+                 }
+               },
+               {
+                 "uuid": "152488CC33434A8C9CACBC2E06A7E535"
+               },
+               {
+                 "uuid": "9152B3DEF40F414BBBC68CACE2F5F6E4"
+               },
+               {
+                 "uuid": "B9A39766B17E4406864D785DB6893C3D"
+               },
+               {
+                 "uuid": "CD4A9E5539FF4B5FA4940C1D063CCA63"
+               },
+               {
+                 "uuid": "385690A445FA4F90998C136506EE902B"
+               }
+             ]
+         },
+         "data": {
+           "40E75F3DE56B4B11B3AFBDE46785737B": {
+             "_value": {
+               "_key": "person"
+             },
+             "_ref": {
+               "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+               "type": "entity"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "9CEF74766BBB4B9682B7817B43CEAE48": {
+             "_value": {
+               "_key": "enabled",
+               "type": "boolean",
+               "default": true
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "34F209A883D3406FBA6BACD9E07DB1D9": {
+             "_value": {
+               "_key": "contacts",
+               "type": "list"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "F429C51BF01C405DA517616E0E16DE4E": {
+             "_value": {
+               "_key": ""
+             },
+             "_ref": {
+               "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+               "type": "entity"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "8823CFCE7D4645C68991332091C1A05C": {
+             "_value": {
+               "_key": "relationship",
+               "type": "text",
+               "pattern": "\\w+"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "152488CC33434A8C9CACBC2E06A7E535": {
+             "_value": {
+               "_key": "theme",
+               "type": "text",
+               "enum": [
+                 "light",
+                 "dark",
+                 "inverse"
+               ]
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "9152B3DEF40F414BBBC68CACE2F5F6E4": {
+             "_value": {
+               "_key": "created",
+               "type": "date"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "B9A39766B17E4406864D785DB6893C3D": {
+             "_value": {
+               "_key": "likes",
+               "type": "number",
+               "min": "0"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "58A9345E881F48C980498C7FFB68667D": {
+             "_value": {
+               "type": "any",
+               "enum": [
+                 42,
+                 "foo",
+                 null,
+                 true
+               ]
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "CD4A9E5539FF4B5FA4940C1D063CCA63": {
+             "_value": {
+               "_key": "Something"
+             },
+             "_ref": {
+               "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+               "type": "entity"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "385690A445FA4F90998C136506EE902B": {
+             "_value": {
+               "_key": "mapTest",
+               "type": "map"
+             },
+             "_detached": false,
+             "_bound": false
+           },
+           "detachedItem": {
+             "_value": {},
+             "_detached": true,
+             "_bound": false
+           },
+           "2FB36217D01F4DA4B7E965BA3E1B45CE": {
+             "_value": {
+               "value": "foo"
+             },
+             "_detached": false,
+             "_bound": false
+           }
+         }
+     }
+  },
+  "_issues": {
+    "_": {}
+  }
+}

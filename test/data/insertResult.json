@@ -1,0 +1,82 @@
+{
+    "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+    "_type": "entity",
+    "_head": {
+        "name": "Account",
+        "description": "This is the resource description",
+        "created": 42424242424242,
+        "updated": 42424242424242,
+        "version": "1.2.3"
+    },
+    "_body":{
+        "_layout": [{
+            "uuid": "40E75F3DE56B4B11B3AFBDE46785737B"
+        },{
+            "uuid": "9CEF74766BBB4B9682B7817B43CEAE48"
+        },{
+            "uuid": "34F209A883D3406FBA6BACD9E07DB1D9",
+            "children": [{
+                "uuid": "F429C51BF01C405DA517616E0E16DE4E",
+                "children": [{
+                    "uuid": "2647261892C548148B9AE62337DD6714"
+                },{
+                    "uuid": "8823CFCE7D4645C68991332091C1A05C"
+                }, {
+                    "uuid": "58A9345E881F48C980498C7FFB68667D"
+                }]
+            }]
+        },{
+            "uuid": "152488CC33434A8C9CACBC2E06A7E535"
+        },{
+            "uuid": "9152B3DEF40F414BBBC68CACE2F5F6E4"
+        },{
+            "uuid": "B9A39766B17E4406864D785DB6893C3D"
+        }],
+        "_data": {
+            "2647261892C548148B9AE62337DD6714": {
+                "_key": "foo",
+                "type": "text"
+            },
+            "40E75F3DE56B4B11B3AFBDE46785737B": {
+                "_key": "person",
+                "ref": "person"
+            },
+            "9CEF74766BBB4B9682B7817B43CEAE48": {
+                "_key": "enabled",
+                "type": "boolean",
+                "default": true
+            },
+            "34F209A883D3406FBA6BACD9E07DB1D9": {
+                "_key": "contacts",
+                "type": "list"
+            },
+            "F429C51BF01C405DA517616E0E16DE4E": {
+                "_key": "",
+                "ref": "person"
+            },
+            "8823CFCE7D4645C68991332091C1A05C": {
+                "_key": "relationship",
+                "type": "text",
+                "pattern": "\\w+"
+            },
+            "152488CC33434A8C9CACBC2E06A7E535": {
+                "_key": "theme",
+                "type": "text",
+                "enum": ["light", "dark", "inverse"]
+            },
+            "9152B3DEF40F414BBBC68CACE2F5F6E4": {
+                "_key": "created",
+                "type": "date"
+            },
+            "B9A39766B17E4406864D785DB6893C3D": {
+                "_key": "likes",
+                "type": "number",
+                "min": "0"
+            },
+            "58A9345E881F48C980498C7FFB68667D": {
+                "type": "any",
+                "enum": [42, "foo", null, true]
+            }
+        }
+    }
+}

@@ -1,0 +1,3496 @@
+{
+  "examples": [
+    {
+      "description": "This example shows what happens when define is called",
+      "message": {
+        "action": "define",
+        "parameters": {
+          "section": "foo.bar"
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "_": {
+            "layout": {
+              "_": [
+                {
+                  "uuid": "person"
+                },
+                {
+                  "uuid": "enabled"
+                },
+                {
+                  "uuid": "contacts",
+                  "groups": {
+                    "_": [
+                      {
+                        "uuid": "contacts_type",
+                        "groups": {
+                          "_": [
+                            {
+                              "uuid": "relationship"
+                            },
+                            {
+                              "uuid": "any_type"
+                            },
+                            {
+                              "uuid": "another"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "uuid": "theme"
+                },
+                {
+                  "uuid": "created"
+                },
+                {
+                  "uuid": "likes"
+                },
+                {
+                  "uuid": "Something"
+                },
+                {
+                  "uuid": "mapTest"
+                }
+              ]
+            },
+            "data": {
+              "person": {
+                "_value": {
+                  "_key": "person"
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "enabled": {
+                "_value": {
+                  "_key": "enabled",
+                  "type": "boolean",
+                  "default": true
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts": {
+                "_value": {
+                  "_key": "contacts",
+                  "type": "list"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts_type": {
+                "_value": {
+                  "_key": ""
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "relationship": {
+                "_value": {
+                  "_key": "relationship",
+                  "type": "text",
+                  "pattern": "\\w+"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "theme": {
+                "_value": {
+                  "_key": "theme",
+                  "type": "text",
+                  "enum": [
+                    "light",
+                    "dark",
+                    "inverse"
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "created": {
+                "_value": {
+                  "_key": "created",
+                  "type": "date"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "likes": {
+                "_value": {
+                  "_key": "likes",
+                  "type": "number",
+                  "min": "0"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "any_type": {
+                "_value": {
+                  "type": "any",
+                  "enum": [
+                    42,
+                    "foo",
+                    null,
+                    true
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "Something": {
+                "_value": {
+                  "_key": "Something"
+                },
+                "_ref": {
+                  "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "mapTest": {
+                "_value": {
+                  "_key": "mapTest",
+                  "type": "map"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "detachedItem": {
+                "_value": null,
+                "_bound": false,
+                "_detached": true
+              },
+              "another": {
+                "_value": {
+                  "value": "foo"
+                },
+                "_bound": false,
+                "_detached": false
+              }
+            }
+          }
+        },
+        "_issues": {}
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "_": {
+            "layout": {
+              "_": [
+                {
+                  "uuid": "person"
+                },
+                {
+                  "uuid": "enabled"
+                },
+                {
+                  "uuid": "contacts",
+                  "groups": {
+                    "_": [
+                      {
+                        "uuid": "contacts_type",
+                        "groups": {
+                          "_": [
+                            {
+                              "uuid": "relationship"
+                            },
+                            {
+                              "uuid": "any_type"
+                            },
+                            {
+                              "uuid": "another"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "uuid": "theme"
+                },
+                {
+                  "uuid": "created"
+                },
+                {
+                  "uuid": "likes"
+                },
+                {
+                  "uuid": "Something"
+                },
+                {
+                  "uuid": "mapTest"
+                }
+              ]
+            },
+            "data": {
+              "person": {
+                "_value": {
+                  "_key": "person"
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "enabled": {
+                "_value": {
+                  "_key": "enabled",
+                  "type": "boolean",
+                  "default": true
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts": {
+                "_value": {
+                  "_key": "contacts",
+                  "type": "list"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts_type": {
+                "_value": {
+                  "_key": ""
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "relationship": {
+                "_value": {
+                  "_key": "relationship",
+                  "type": "text",
+                  "pattern": "\\w+"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "theme": {
+                "_value": {
+                  "_key": "theme",
+                  "type": "text",
+                  "enum": [
+                    "light",
+                    "dark",
+                    "inverse"
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "created": {
+                "_value": {
+                  "_key": "created",
+                  "type": "date"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "likes": {
+                "_value": {
+                  "_key": "likes",
+                  "type": "number",
+                  "min": "0"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "any_type": {
+                "_value": {
+                  "type": "any",
+                  "enum": [
+                    42,
+                    "foo",
+                    null,
+                    true
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "Something": {
+                "_value": {
+                  "_key": "Something"
+                },
+                "_ref": {
+                  "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "mapTest": {
+                "_value": {
+                  "_key": "mapTest",
+                  "type": "map"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "detachedItem": {
+                "_value": null,
+                "_bound": false,
+                "_detached": true
+              },
+              "another": {
+                "_value": {
+                  "value": "foo"
+                },
+                "_bound": false,
+                "_detached": false
+              }
+            }
+          },
+          "foo": {
+            "bar": {}
+          }
+        },
+        "_issues": {}
+      }
+    },
+    {
+      "description": "This example shows what happens when undefine is called",
+      "message": {
+        "action": "undefine",
+        "parameters": {
+          "section": "foo.bar"
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "_": {
+            "layout": {
+              "_": [
+                {
+                  "uuid": "person"
+                },
+                {
+                  "uuid": "enabled"
+                },
+                {
+                  "uuid": "contacts",
+                  "groups": {
+                    "_": [
+                      {
+                        "uuid": "contacts_type",
+                        "groups": {
+                          "_": [
+                            {
+                              "uuid": "relationship"
+                            },
+                            {
+                              "uuid": "any_type"
+                            },
+                            {
+                              "uuid": "another"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "uuid": "theme"
+                },
+                {
+                  "uuid": "created"
+                },
+                {
+                  "uuid": "likes"
+                },
+                {
+                  "uuid": "Something"
+                },
+                {
+                  "uuid": "mapTest"
+                }
+              ]
+            },
+            "data": {
+              "person": {
+                "_value": {
+                  "_key": "person"
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "enabled": {
+                "_value": {
+                  "_key": "enabled",
+                  "type": "boolean",
+                  "default": true
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts": {
+                "_value": {
+                  "_key": "contacts",
+                  "type": "list"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts_type": {
+                "_value": {
+                  "_key": ""
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "relationship": {
+                "_value": {
+                  "_key": "relationship",
+                  "type": "text",
+                  "pattern": "\\w+"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "theme": {
+                "_value": {
+                  "_key": "theme",
+                  "type": "text",
+                  "enum": [
+                    "light",
+                    "dark",
+                    "inverse"
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "created": {
+                "_value": {
+                  "_key": "created",
+                  "type": "date"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "likes": {
+                "_value": {
+                  "_key": "likes",
+                  "type": "number",
+                  "min": "0"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "any_type": {
+                "_value": {
+                  "type": "any",
+                  "enum": [
+                    42,
+                    "foo",
+                    null,
+                    true
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "Something": {
+                "_value": {
+                  "_key": "Something"
+                },
+                "_ref": {
+                  "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "mapTest": {
+                "_value": {
+                  "_key": "mapTest",
+                  "type": "map"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "detachedItem": {
+                "_value": null,
+                "_bound": false,
+                "_detached": true
+              },
+              "another": {
+                "_value": {
+                  "value": "foo"
+                },
+                "_bound": false,
+                "_detached": false
+              }
+            }
+          },
+          "foo": {
+            "bar": {
+              "_": {}
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "_": {
+            "layout": {
+              "_": [
+                {
+                  "uuid": "person"
+                },
+                {
+                  "uuid": "enabled"
+                },
+                {
+                  "uuid": "contacts",
+                  "groups": {
+                    "_": [
+                      {
+                        "uuid": "contacts_type",
+                        "groups": {
+                          "_": [
+                            {
+                              "uuid": "relationship"
+                            },
+                            {
+                              "uuid": "any_type"
+                            },
+                            {
+                              "uuid": "another"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "uuid": "theme"
+                },
+                {
+                  "uuid": "created"
+                },
+                {
+                  "uuid": "likes"
+                },
+                {
+                  "uuid": "Something"
+                },
+                {
+                  "uuid": "mapTest"
+                }
+              ]
+            },
+            "data": {
+              "person": {
+                "_value": {
+                  "_key": "person"
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "enabled": {
+                "_value": {
+                  "_key": "enabled",
+                  "type": "boolean",
+                  "default": true
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts": {
+                "_value": {
+                  "_key": "contacts",
+                  "type": "list"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "contacts_type": {
+                "_value": {
+                  "_key": ""
+                },
+                "_ref": {
+                  "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "relationship": {
+                "_value": {
+                  "_key": "relationship",
+                  "type": "text",
+                  "pattern": "\\w+"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "theme": {
+                "_value": {
+                  "_key": "theme",
+                  "type": "text",
+                  "enum": [
+                    "light",
+                    "dark",
+                    "inverse"
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "created": {
+                "_value": {
+                  "_key": "created",
+                  "type": "date"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "likes": {
+                "_value": {
+                  "_key": "likes",
+                  "type": "number",
+                  "min": "0"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "any_type": {
+                "_value": {
+                  "type": "any",
+                  "enum": [
+                    42,
+                    "foo",
+                    null,
+                    true
+                  ]
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "Something": {
+                "_value": {
+                  "_key": "Something"
+                },
+                "_ref": {
+                  "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                  "type": "entity"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "mapTest": {
+                "_value": {
+                  "_key": "mapTest",
+                  "type": "map"
+                },
+                "_bound": false,
+                "_detached": false
+              },
+              "detachedItem": {
+                "_value": null,
+                "_bound": false,
+                "_detached": true
+              },
+              "another": {
+                "_value": {
+                  "value": "foo"
+                },
+                "_bound": false,
+                "_detached": false
+              }
+            }
+          },
+          "foo": {}
+        },
+        "_issues": {
+          "foo": {}
+        }
+      }
+    },
+    {
+      "description": "This example shows what happens when insert is called with a section/group/path defined",
+      "message": {
+        "action": "insert",
+        "parameters": {
+          "section": "foo.bar",
+          "put": [
+            {
+              "index": 2,
+              "uuid": "contacts"
+            },
+            {
+              "index": 0,
+              "uuid": "contacts_type"
+            },
+            {
+              "uuid": "newItem",
+              "group": "faz",
+              "index": 0
+            }
+          ],
+          "data": {
+            "type": "text",
+            "_key": "foo"
+          }
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ],
+                              "faz": [
+                                {
+                                  "uuid": "newItem"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "newItem": {
+                    "_value": {
+                      "type": "text",
+                      "_key": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      }
+    },
+    {
+      "description": "This example shows what happens when remove is called with a section/group/path defined",
+      "message": {
+        "action": "remove",
+        "parameters": {
+          "section": "foo.bar",
+          "pull": [
+            {
+              "index": 2,
+              "uuid": "contacts"
+            },
+            {
+              "index": 0,
+              "uuid": "contacts_type"
+            },
+            {
+              "uuid": "newItem",
+              "group": "faz",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ],
+                              "faz": [
+                                {
+                                  "uuid": "newItem"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "newItem": {
+                    "_value": {
+                      "type": "text",
+                      "_key": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {}
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {}
+      }
+    },
+    {
+      "description": "This example shows what happens when move is called with a section/group/path defined",
+      "message": {
+        "action": "move",
+        "parameters": {
+          "section": "foo.bar",
+          "pull": [
+            {
+              "index": 2,
+              "uuid": "contacts"
+            },
+            {
+              "index": 0,
+              "uuid": "contacts_type"
+            },
+            {
+              "uuid": "newItem",
+              "group": "faz",
+              "index": 0
+            }
+          ],
+          "put": [
+            {
+              "index": 0,
+              "group": "baz"
+            }
+          ]
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ],
+                              "faz": [
+                                {
+                                  "uuid": "newItem"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "newItem": {
+                    "_value": {
+                      "type": "text",
+                      "_key": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ],
+                  "baz": [
+                    {
+                      "uuid": "newItem"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "newItem": {
+                    "_value": {
+                      "type": "text",
+                      "_key": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      }
+    },
+    {
+      "description": "This example shows what happens when update is called with a section/group/path defined",
+      "message": {
+        "action": "update",
+        "parameters": {
+          "section": "foo.bar",
+          "uuid": "newItem",
+          "data": {
+            "value": 42
+          }
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ],
+                              "faz": [
+                                {
+                                  "uuid": "newItem"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "newItem": {
+                    "_value": {
+                      "type": "text",
+                      "_key": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ],
+                              "faz": [
+                                {
+                                  "uuid": "newItem"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "newItem": {
+                    "_value": {
+                      "value": 42
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      }
+    },
+    {
+      "description": "This example shows what happens when rename is called",
+      "message": {
+        "action": "rename",
+        "parameters": {
+          "data": {
+            "name": "This is the new name",
+            "description": "This is a new description"
+          }
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {}
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "This is the new name",
+          "description": "This is a new description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {}
+      }
+    },
+    {
+      "description": "This example shows what happens when issues is called with a section defined",
+      "message": {
+        "action": "issues",
+        "parameters": {
+          "section": "foo.bar",
+          "uuid": "person",
+          "data": {
+            "errors": [
+              {
+                "message": "BOOM!"
+              }
+            ]
+          }
+        }
+      },
+      "before": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {}
+          }
+        }
+      },
+      "after": {
+        "_uuid": "B93E416D505E4596BE8276AC4D380C9C",
+        "_type": "entity",
+        "_head": {
+          "name": "Account",
+          "description": "This is the resource description",
+          "created": 42424242424242,
+          "updated": 42424242424242,
+          "version": "1.2.3"
+        },
+        "_refs": {
+          "4ABE4F6230F148B3BAB987715B49DE22": {
+            "count": 2,
+            "type": "entity"
+          },
+          "5FE98E00DBCC405E8150CC6035BFBA13": {
+            "count": 1,
+            "type": "entity"
+          }
+        },
+        "_body": {
+          "foo": {
+            "bar": {
+              "_": {
+                "layout": {
+                  "_": [
+                    {
+                      "uuid": "person"
+                    },
+                    {
+                      "uuid": "enabled"
+                    },
+                    {
+                      "uuid": "contacts",
+                      "groups": {
+                        "_": [
+                          {
+                            "uuid": "contacts_type",
+                            "groups": {
+                              "_": [
+                                {
+                                  "uuid": "relationship"
+                                },
+                                {
+                                  "uuid": "any_type"
+                                },
+                                {
+                                  "uuid": "another"
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "uuid": "theme"
+                    },
+                    {
+                      "uuid": "created"
+                    },
+                    {
+                      "uuid": "likes"
+                    },
+                    {
+                      "uuid": "Something"
+                    },
+                    {
+                      "uuid": "mapTest"
+                    }
+                  ]
+                },
+                "data": {
+                  "person": {
+                    "_value": {
+                      "_key": "person"
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "enabled": {
+                    "_value": {
+                      "_key": "enabled",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts": {
+                    "_value": {
+                      "_key": "contacts",
+                      "type": "list"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "contacts_type": {
+                    "_value": {
+                      "_key": ""
+                    },
+                    "_ref": {
+                      "uuid": "4ABE4F6230F148B3BAB987715B49DE22",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "relationship": {
+                    "_value": {
+                      "_key": "relationship",
+                      "type": "text",
+                      "pattern": "\\w+"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "theme": {
+                    "_value": {
+                      "_key": "theme",
+                      "type": "text",
+                      "enum": [
+                        "light",
+                        "dark",
+                        "inverse"
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "created": {
+                    "_value": {
+                      "_key": "created",
+                      "type": "date"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "likes": {
+                    "_value": {
+                      "_key": "likes",
+                      "type": "number",
+                      "min": "0"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "any_type": {
+                    "_value": {
+                      "type": "any",
+                      "enum": [
+                        42,
+                        "foo",
+                        null,
+                        true
+                      ]
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "Something": {
+                    "_value": {
+                      "_key": "Something"
+                    },
+                    "_ref": {
+                      "uuid": "5FE98E00DBCC405E8150CC6035BFBA13",
+                      "type": "entity"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "mapTest": {
+                    "_value": {
+                      "_key": "mapTest",
+                      "type": "map"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  },
+                  "detachedItem": {
+                    "_value": null,
+                    "_bound": false,
+                    "_detached": true
+                  },
+                  "another": {
+                    "_value": {
+                      "value": "foo"
+                    },
+                    "_bound": false,
+                    "_detached": false
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_issues": {
+          "foo": {
+            "bar": {
+              "_": {
+                "person": {
+                  "errors": [
+                    {
+                      "message": "BOOM!"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
