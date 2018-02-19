@@ -44,7 +44,7 @@ function _validateIs(value, checkFn, defaultValue, message) {
 
 function _fromJs(js, correctErrors) {
     if (!IsPlainObject(js)) {
-        throw new Error('Not a plain object');
+        throw new Error('Argument Error: Not a valid object');
     }
 
     return _Document(js._uuid, js._type, js._head, js._refs, js._body, js._issues, correctErrors);

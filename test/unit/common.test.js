@@ -2,7 +2,7 @@
 import Chai from 'chai';
 import DirtyChai from 'dirty-chai';
 import { fromJS } from 'immutable';
-import { UpdateReference, GetSection, FindTarget } from '../../src/common';
+import { UpdateReference, GetSection, FindTarget, DeleteSection } from '../../src/common';
 
 Chai.use(DirtyChai);
 
@@ -691,6 +691,189 @@ describe('Unit :', () => {
 
         // ApplySection(source, part, sectionDef, section)
         describe('ApplySection', () => {});
+
+        // DeleteSection(source, part, sectionDef)
+        describe('DeleteSection', () => {
+            it('source undefined', () => {
+                try {
+                    DeleteSection();
+
+                    expect.fail();
+                } catch (err) {
+                    expect(err.message).to.equal('Internal Error: Source cannot be nil');
+                }
+            });
+
+            it('source null', () => {
+                try {
+                    DeleteSection(null);
+
+                    expect.fail();
+                } catch (err) {
+                    expect(err.message).to.equal('Internal Error: Source cannot be nil');
+                }
+            });
+
+            it('part undefined', () => {
+                const source = fromJS({});
+
+                try {
+                    DeleteSection(source);
+
+                    expect.fail();
+                } catch (err) {
+                    expect(err.message).to.equal('Internal Error: Part cannot be nil');
+                }
+            });
+
+            it('part null', () => {
+                const source = fromJS({});
+
+                try {
+                    DeleteSection(source, null);
+
+                    expect.fail();
+                } catch (err) {
+                    expect(err.message).to.equal('Internal Error: Part cannot be nil');
+                }
+            });
+
+            describe('Empty data', () => {
+                it('section undefined', () => {
+                    const source = fromJS({
+                        _issues: {}
+                    });
+
+                    DeleteSection(source, '_issues');
+
+                    const current = source.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {}
+                    });
+                });
+
+                it('section null', () => {
+                    const source = fromJS({
+                        _issues: {}
+                    });
+
+                    DeleteSection(source, '_issues', null);
+
+                    const current = source.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {}
+                    });
+                });
+
+                it('section empty string', () => {
+                    const source = fromJS({
+                        _issues: {}
+                    });
+
+                    DeleteSection(source, '_issues', '');
+
+                    const current = source.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {}
+                    });
+                });
+            });
+
+            describe('With data', () => {
+                it('section undefined', () => {
+                    const source = fromJS({
+                        _issues: {
+                            foo: 42,
+                            bar: true
+                        }
+                    });
+
+                    const newSource = DeleteSection(source, '_issues');
+
+                    const current = newSource.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {}
+                    });
+                });
+
+                it('section null', () => {
+                    const source = fromJS({
+                        _issues: {
+                            foo: 42,
+                            bar: true
+                        }
+                    });
+
+                    const newSource = DeleteSection(source, '_issues', null);
+
+                    const current = newSource.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {}
+                    });
+                });
+
+                it('section empty string', () => {
+                    const source = fromJS({
+                        _issues: {
+                            foo: 42,
+                            bar: true
+                        }
+                    });
+
+                    const newSource = DeleteSection(source, '_issues', '');
+
+                    const current = newSource.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {}
+                    });
+                });
+
+                it('target string exists', () => {
+                    const source = fromJS({
+                        _issues: {
+                            foo: 42,
+                            bar: true
+                        }
+                    });
+
+                    const newSource = DeleteSection(source, '_issues', 'foo');
+
+                    const current = newSource.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {
+                            bar: true
+                        }
+                    });
+                });
+
+                it('target string does not exist', () => {
+                    const source = fromJS({
+                        _issues: {
+                            foo: 42,
+                            bar: true
+                        }
+                    });
+
+                    const newSource = DeleteSection(source, '_issues', 'baz');
+
+                    const current = newSource.toJS();
+
+                    expect(current).to.deep.equal({
+                        _issues: {
+                            foo: 42,
+                            bar: true
+                        }
+                    });
+                });
+            });
+        });
 
         // ApplyData(source, sectionDef, uuid, data)
         describe('ApplyData', () => {});

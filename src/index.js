@@ -1,5 +1,8 @@
 import Document from './document';
+import { Schema, Validate } from './schema';
 
 export default {
-    Document
+    Document,
+    Schema,
+    Validate
 };

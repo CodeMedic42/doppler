@@ -11,20 +11,69 @@ const { expect } = Chai;
 describe('Unit :', () => {
     // function IssuesOperation(source, parameters)
     describe('Document :', () => {
-        it('New empty document', () => {
-            const doc = Document();
+        describe('constructor', () => {
+            it('New empty document', () => {
+                const doc = Document();
 
-            const ret = doc.toJs();
+                const ret = doc.toJs();
 
-            expect(ret._uuid).to.be.a('string');
-            delete ret._uuid;
+                expect(ret._uuid).to.be.a('string');
+                delete ret._uuid;
 
-            expect(ret).to.deep.equal({
-                _body: {},
-                _issues: {},
-                _refs: {},
-                _head: {},
-                _type: ''
+                expect(ret).to.deep.equal({
+                    _body: {},
+                    _issues: {},
+                    _refs: {},
+                    _head: {},
+                    _type: ''
+                });
+            });
+
+            it('Invaid Id', () => {
+                try {
+                    Document(42);
+
+                    expect.fail();
+                } catch (err) {
+                    expect(err.message).to.equal('Argument Error: Invalid uuid');
+                }
+            });
+        });
+
+        describe('fromJson', () => {
+            xit('Invalid Id', () => {
+                const doc = Document();
+
+                const ret = doc.toJson();
+
+                expect(ret._uuid).to.be.a('string');
+                delete ret._uuid;
+
+                expect(ret).to.deep.equal({
+                    _body: {},
+                    _issues: {},
+                    _refs: {},
+                    _head: {},
+                    _type: ''
+                });
+            });
+        });
+
+        describe('fromJson', () => {
+            it('Invalid Json', () => {
+                try {
+                    Document.fromJson('42');
+
+                    expect.fail();
+                } catch (err) {
+                    expect(err.message).to.equal('Argument Error: Not a valid object');
+                }
+            });
+        });
+
+        describe('toJs', () => {
+            xit('Invalid Json', () => {
+                Document.fromJson('42');
             });
         });
 
@@ -101,8 +150,6 @@ describe('Unit :', () => {
                     section: 'foo',
                     pull: 'bar'
                 };
-
-                debugger;
 
                 const finalParameters = doc.remove(parameters);
 
